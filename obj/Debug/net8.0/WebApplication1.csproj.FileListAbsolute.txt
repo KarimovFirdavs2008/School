@@ -111,6 +111,14 @@ C:\Front & Becand\WebApplication1\WebApplication1\obj\Debug\net8.0\refint\WebApp
 C:\Front & Becand\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 C:\Front & Becand\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 C:\Front & Becand\WebApplication1\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.csproj.AssemblyReference.cache
+C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.AssemblyInfoInputs.cache
+C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.AssemblyInfo.cs
+C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.sourcelink.json
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\appsettings.Development.json
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\appsettings.json
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.exe
@@ -203,13 +211,6 @@ C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\ru\Microsoft.CodeAn
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.csproj.AssemblyReference.cache
-C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.AssemblyInfoInputs.cache
-C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.AssemblyInfo.cs
-C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.csproj.CoreCompileInputs.cache
-C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
-C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
 C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.build.json
 C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.development.json
 C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props

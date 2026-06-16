@@ -5,11 +5,25 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WebApplication1.Services;
 using Microsoft.OpenApi.Models;
+using WebApplication1.Interfaces;
+using WebApplication1.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString =
     builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+
+builder.Services.AddScoped<IStudentService, StudentService>();
+
+builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
+
+builder.Services.AddScoped<ITeacherService, TeacherService>();
+
+builder.Services.AddScoped<IJournalRepository, JournalRepository>();
+
+builder.Services.AddScoped<IJournalService, JournalService>();
 
 builder.Services.AddControllers();
 

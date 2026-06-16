@@ -12,8 +12,8 @@ using WebApplication1;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260601112446_InitialJournal")]
-    partial class InitialJournal
+    [Migration("20260609111356_Interfaces")]
+    partial class Interfaces
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -177,8 +177,7 @@ namespace WebApplication1.Migrations
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasMaxLength(3)
-                        .HasColumnType("varchar(3)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 

@@ -6,7 +6,6 @@ public class User
 {
     public int Id { get; set; }
     [Required]
-    [MaxLength(3)]
     public string Username { get; set; } = "";
     public string PasswordHash { get; set; } = "";
     public string Role { get; set; } = "";
