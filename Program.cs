@@ -25,6 +25,10 @@ builder.Services.AddScoped<IJournalRepository, JournalRepository>();
 
 builder.Services.AddScoped<IJournalService, JournalService>();
 
+builder.Services.AddScoped<ICleanerRepository, CleanerRepository>();
+
+builder.Services.AddScoped<ICleanerService, CleanerService>();
+
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();

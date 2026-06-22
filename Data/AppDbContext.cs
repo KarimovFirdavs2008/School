@@ -14,4 +14,5 @@ public class AppDbContext : DbContext
     public DbSet<User> Users => Set<User>();
     public DbSet<Teacher> Teachers => Set<Teacher>();
     public DbSet<Journal> Journals => Set<Journal>();
+    public DbSet<Cleaner> Cleaners => Set<Cleaner>();
 }
