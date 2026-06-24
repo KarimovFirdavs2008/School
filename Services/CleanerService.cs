@@ -1,4 +1,5 @@
-﻿using WebApplication1.DTOs;
+﻿using AutoMapper;
+using WebApplication1.DTOs;
 using WebApplication1.Interfaces;
 using WebApplication1.Models;
 
@@ -7,10 +8,12 @@ namespace WebApplication1.Services;
 public class CleanerService : ICleanerService
 {
     private readonly ICleanerRepository _repository;
+    private readonly  IMapper _mapper;
     
-    public CleanerService(ICleanerRepository repository)
+    public CleanerService(ICleanerRepository repository, IMapper mapper)
     {
         _repository = repository;
+        _mapper = mapper;
     }
 
     public Task<List<Cleaner>> GetAllAsync()
@@ -25,17 +28,7 @@ public class CleanerService : ICleanerService
 
     public async Task<Cleaner> CreateAsync(CreateCleanerDto dto)
     {
-        var cleaner = new Cleaner
-        {
-            Name = dto.Name,
-            Surname = dto.Surname,
-            Phone = dto.Phone,
-            Age = dto.Age,
-            Gender = dto.Gender,
-            Experience = dto.Experience,
-            Address = dto.Address,
-            City = dto.City,
-        };
+        var cleaner = _mapper.Map<Cleaner>(dto);
         return await _repository.CreateAsync(cleaner);
     }
 
@@ -43,14 +36,7 @@ public class CleanerService : ICleanerService
     {
         var cleaner = await _repository.GetByIdAsync(id);
         if (cleaner == null) return null;
-        cleaner.Name = dto.Name;
-        cleaner.Surname = dto.Surname;
-        cleaner.Phone = dto.Phone;
-        cleaner.Age = dto.Age;
-        cleaner.Gender = dto.Gender;
-        cleaner.Experience = dto.Experience;
-        cleaner.Address = dto.Address;
-        cleaner.City = dto.City;
+        _mapper.Map(dto, cleaner);
         return await _repository.UpdateAsync(id, cleaner);
     }
     public async Task<bool> DeleteAsync(int id)

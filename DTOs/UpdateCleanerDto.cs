@@ -1,27 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿namespace WebApplication1.DTOs;
 
-namespace WebApplication1.DTOs;
-
-public class CreateCleanerDto
+public class UpdateCleanerDto
 {
-    [Required]
-    [MinLength(2)]
     public string Name { get; set; } = "";
-    [Required]
-    [MinLength(2)]
     public string Surname { get; set; } = "";
-    [Required]
-    [MinLength(4)]
     public string Phone { get; set; } = "";
-    [Required]
-    [Range(16, 19)]
     public string Age { get; set; } = "";
-    [Required]
     public string Gender { get; set; } = "";
-    [Required]
     public string Experience { get; set; } = "";
-    [Required]
     public string Address { get; set; } = "";
-    [Required]
     public string City { get; set; } = "";
 }

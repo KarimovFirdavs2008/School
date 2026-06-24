@@ -1,4 +1,5 @@
-﻿using WebApplication1.DTOs;
+﻿using AutoMapper;
+using WebApplication1.DTOs;
 using WebApplication1.Interfaces;
 using WebApplication1.Models;
 
@@ -7,9 +8,11 @@ namespace WebApplication1.Services;
 public class TeacherService : ITeacherService
 {
     private readonly ITeacherRepository _repository;
-    public TeacherService(ITeacherRepository repository)
+    private readonly IMapper _mapper;
+    public TeacherService(ITeacherRepository repository, IMapper mapper)
     {
         _repository = repository;
+        _mapper = mapper;
     }
 
     public Task<List<Teacher>> GetAllAsync()
@@ -24,17 +27,7 @@ public class TeacherService : ITeacherService
 
     public async Task<Teacher> CreateAsync(CreateTeacherDto dto)
     {
-        var teacher = new Teacher
-        {
-            Name = dto.Name,
-            Surname = dto.Surname,
-            Age = dto.Age,
-            Phone = dto.Phone,
-            Address =  dto.Address,
-            Lesson =  dto.Lesson,
-            Experience =  dto.Experience,
-            Salary =   dto.Salary
-        };
+        var teacher = _mapper.Map<Teacher>(dto);
         
         return await _repository.CreateAsync(teacher);
     }
@@ -44,14 +37,7 @@ public class TeacherService : ITeacherService
         var teacher = await _repository.GetByIdAsync(id);
         if (teacher == null)
             return null;
-        teacher.Name = dto.Name;
-        teacher.Surname = dto.Surname;
-        teacher.Age = dto.Age;
-        teacher.Phone = dto.Phone;
-        teacher.Address = dto.Address;
-        teacher.Lesson = dto.Lesson;
-        teacher.Experience = dto.Experience;
-        teacher.Salary = dto.Salary;
+        _mapper.Map(dto, teacher);
         return await _repository.UpdateAsync(id, teacher);
     }
 

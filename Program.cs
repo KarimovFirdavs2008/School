@@ -6,8 +6,8 @@ using System.Text;
 using WebApplication1.Services;
 using Microsoft.OpenApi.Models;
 using WebApplication1.Interfaces;
+using WebApplication1.Mappings;
 using WebApplication1.Repositories;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +34,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddAuthorization();
+
+builder.Services.AddAutoMapper(typeof(StudentProfile));
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(

@@ -119,6 +119,9 @@ C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.run
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.dll
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.pdb
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\BCrypt-Net-Next.dll
+C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\FluentValidation.dll
+C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\Humanizer.dll
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -225,3 +228,5 @@ C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\refint\WebApplicati
 C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 C:\Projects\WebApplication1\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\AutoMapper.dll
+C:\Projects\WebApplication1\WebApplication1\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

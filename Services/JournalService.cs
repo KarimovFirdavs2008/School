@@ -1,4 +1,5 @@
-﻿using WebApplication1.DTOs;
+﻿using AutoMapper;
+using WebApplication1.DTOs;
 using WebApplication1.Interfaces;
 using WebApplication1.Models;
 
@@ -7,9 +8,11 @@ namespace WebApplication1.Services;
 public class JournalService : IJournalService
 {
     private readonly IJournalRepository _repository;
-    public JournalService(IJournalRepository repository)
+    private readonly IMapper _mapper;
+    public JournalService(IJournalRepository repository, IMapper mapper)
     {
         _repository = repository;
+        _mapper = mapper;
     }
 
     public async Task<List<Journal>> GetAllAsync()
@@ -23,15 +26,7 @@ public class JournalService : IJournalService
 
     public async Task<Journal> CreateAsync(CreateJournalDto dto)
     {
-        var journal = new Journal
-        {
-            TeacherName = dto.TeacherName,
-            StudentName = dto.StudentName,
-            LessonName = dto.LessonName,
-            Points = dto.Points,
-            DateCreated = dto.DateCreated,
-            ClassId = dto.ClassId
-        };
+        var journal = _mapper.Map<Journal>(dto);
         return await _repository.CreateAsync(journal);
     }
 
@@ -40,13 +35,7 @@ public class JournalService : IJournalService
         var journal = await _repository.GetByIdAsync(id);
         if (journal == null)
             return null;
-        
-        journal.TeacherName = dto.TeacherName;
-        journal.StudentName = dto.StudentName;
-        journal.LessonName = dto.LessonName;
-        journal.Points = dto.Points;
-        journal.DateCreated = dto.DateCreated;
-        journal.ClassId = dto.ClassId;
+        _mapper.Map(dto, journal);
         return await _repository.UpdateAsync(id, journal);
     }
 
